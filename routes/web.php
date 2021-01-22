@@ -16,7 +16,6 @@ use App\Http\Controllers\ImeiautorizadoController;
 
 
 use App\Http\Controllers\VotocandidatoController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +32,8 @@ Route::get('/', function () {
 
 
 });
+Route::get('casilla/pdf',[CasillaController::class,
+	'generatepdf']);
 
 Route::resource('casilla', CasillaController::class);
 Route::resource('funcionario', FuncionarioController::class);
